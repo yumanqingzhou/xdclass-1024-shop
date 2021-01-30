@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1daa926e-378b-4094-bc90-f57102bc224c" name="Default Changelist" comment="">
+    <list default="true" id="1daa926e-378b-4094-bc90-f57102bc224c" name="Default Changelist" comment="搭建项目">
       <change afterPath="$PROJECT_DIR$/../basic-code/.idea/artifacts/day05_tomcat_war_exploded.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../basic-code/.idea/artifacts/day06_servlet_hhtp_war_exploded.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../basic-code/.idea/artifacts/day06_servlet_http_war_exploded.xml" afterDir="false" />
@@ -45,17 +45,16 @@
       <change afterPath="$PROJECT_DIR$/../maven_javaweb/maven_javaweb.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mybatis_eesy/mybatis_eesy.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../videoclass/src/main/java/com/xdeducation/videoclass/VideoclassApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-order-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-product-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/AddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/mapper/AddressMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/model/AddressDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/model/UserDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/utils/MyBatisPlusGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/resources/mapper/AddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../xdclass.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../basic-code/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-code/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../basic-code/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-code/.idea/modules.xml" afterDir="false" />
@@ -63,28 +62,74 @@
       <change beforePath="$PROJECT_DIR$/../basic-code/day01-code/src/com/jyt/lambda/LambdaDemo01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-code/day01-code/src/com/jyt/lambda/LambdaDemo01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../basic-code/day01-code/src/com/jyt/lambda/LambdaDemo02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-code/day01-code/src/com/jyt/lambda/LambdaDemo02.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../basic-code/day01-code/src/com/jyt/test/day01/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-code/day01-code/src/com/jyt/test/day01/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nkTBDqFiGkksZ0TM7G2NYzJ4eD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-user-service\src\main\java\net\xdclass\controller" />
+      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-user-service\src\main\resources\mapper" />
+      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-user-service\src\main\java\net\xdclass\mapper" />
+      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-user-service\src\main\java\net\xdclass\model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MyBatisPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.xdclass.utils.MyBatisPlusGenerator" />
+      <module name="xdclass-user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.xdclass.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyBatisPlusGenerator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -96,8 +141,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611932950657</updated>
-      <workItem from="1611932952092" duration="722000" />
+      <workItem from="1611932952092" duration="1626000" />
+      <workItem from="1611935879477" duration="466000" />
+      <workItem from="1611936368549" duration="3525000" />
     </task>
+    <task id="LOCAL-00001" summary="搭建项目">
+      <created>1611933829061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611933829061</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,21 +168,48 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="搭建项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="搭建项目" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1611933354922">
+    <state x="392" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1611998391448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611933354922" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1611933682561">
+    <state x="392" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1611998391448" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1611933698151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1611933682561" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611933698151" />
+    <state width="1493" height="273" key="GridCell.Tab.0.bottom" timestamp="1611998829057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611998829057" />
+    <state width="1493" height="273" key="GridCell.Tab.0.center" timestamp="1611998829057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="273" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611998829057" />
+    <state width="1493" height="273" key="GridCell.Tab.0.left" timestamp="1611998829057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="273" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611998829057" />
+    <state width="1493" height="273" key="GridCell.Tab.0.right" timestamp="1611998829057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="273" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611998829057" />
+    <state x="270" y="57" key="SettingsEditor" timestamp="1611936348446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1611936348446" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1611933947470">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611933947470" />
     <state x="588" y="273" key="git4idea.rebase.GitRebaseDialog" timestamp="1611933476019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
