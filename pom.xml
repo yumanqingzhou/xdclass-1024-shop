@@ -113,10 +113,24 @@
                 <version>${springfox.boot.starter.version}</version>
             </dependency>
 
+            <!--kaptcha依赖包-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>kaptcha-spring-boot-starter</artifactId>
+                <version>1.1.0</version>
+            </dependency>
 
+            <!--OSS依赖版本控制-->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>3.10.2</version>
+            </dependency>
 
         </dependencies>
+
     </dependencyManagement>
+
 
     <!-- 代码库 -->
     <repositories>

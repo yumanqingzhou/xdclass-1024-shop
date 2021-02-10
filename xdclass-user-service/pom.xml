@@ -17,6 +17,23 @@
             <artifactId>xdclass-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <!--图形验证码依赖包-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>kaptcha-spring-boot-starter</artifactId>
+        </dependency>
+        <!--邮箱发送邮件依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <!--OSS版本依赖控制-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
