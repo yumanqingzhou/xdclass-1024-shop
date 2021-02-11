@@ -7,6 +7,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.util.Random;
+import java.util.UUID;
 
 /**
  * 小滴课堂,愿景：让技术不再难学
@@ -106,5 +107,32 @@ public class CommonUtil {
      */
     public static long getCurrentTimestamp(){
             return System.currentTimeMillis();
+    }
+
+    /**
+     * 生成UUID字符串
+     * @return
+     */
+    public static String getUUID(){
+        UUID uuid = UUID.randomUUID();
+        String uuidStr = uuid.toString().replace("-", "");
+        return uuidStr;
+    }
+
+    /**
+     * 生成指定长度随机字母和数字
+     *
+     * @param length
+     * @return
+     */
+    private static final String ALL_CHAR_NUM = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    public static String getStringNumRandom(int length) {
+        //生成随机数字和字母,
+        Random random = new Random();
+        StringBuilder saltString = new StringBuilder(length);
+        for (int i = 1; i <= length; ++i) {
+            saltString.append(ALL_CHAR_NUM.charAt(random.nextInt(ALL_CHAR_NUM.length())));
+        }
+        return saltString.toString();
     }
 }

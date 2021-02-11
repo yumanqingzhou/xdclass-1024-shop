@@ -82,5 +82,28 @@ public class NotifyServiceImpl implements NotifyService {
         return JsonData.buildResult(BizCodeEnum.CODE_ERROR);
     }
 
+    /**
+     * 注册校验验证码
+     * @param sendCodeType
+     * @param mail
+     * @param code
+     * @return
+     */
+    @Override
+    public Boolean checkCode(SendCodeEnum sendCodeType, String mail, String code) {
+        String cacheKey=String.format(CacheKey.CHECK_CODE_KEY,sendCodeType.name(),mail);
+        String cacheCode = redisTemplate.opsForValue().get(cacheKey);
+        if (StringUtils.isNotBlank(cacheCode)){
+            //比较验证码
+            String codeRedis = cacheCode.split("_")[0];
+            if (codeRedis.equalsIgnoreCase(code)){
+                //删除验证码
+                redisTemplate.delete(cacheKey);
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

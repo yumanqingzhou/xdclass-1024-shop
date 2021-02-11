@@ -10,41 +10,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1daa926e-378b-4094-bc90-f57102bc224c" name="Default Changelist" comment="单元测试整合">
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/constant/CacheKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/SendCodeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/utils/CheckUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/utils/CommonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/utils/JsonData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/constant/CacheKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/enums/SendCodeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/exception/CustomExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/utils/CheckUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/utils/CommonUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/utils/JsonData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/component/MailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/component/impl/MailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/config/CaptchaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/NotifyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/NotifyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/NotifyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/component/MailService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/component/impl/MailServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/config/CaptchaConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/controller/NotifyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/service/NotifyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/service/impl/NotifyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-user-service/target/test-classes/net/xdclass/biz/UtilsTest.class" afterDir="false" />
+    <list default="true" id="1daa926e-378b-4094-bc90-f57102bc224c" name="Default Changelist" comment="图形验证码 邮箱验证码V1版本完结">
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/config/OssConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/request/UserRegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-common/target/classes/META-INF/xdclass-common.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/exception/BizException.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/exception/BizException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/constant/CacheKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/constant/CacheKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/BizCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/BizCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/utils/CommonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/utils/CommonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/enums/BizCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/enums/BizCodeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/utils/CommonUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/utils/CommonUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/NotifyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/NotifyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/NotifyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/NotifyServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/target/classes/META-INF/xdclass-user-service.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xdclass-user-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/target/test-classes/UtilsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/target/classes/net/xdclass/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/constant" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/request" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -88,11 +74,11 @@
       <recent name="net.xdclass.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-user-service\src\main\java\net\xdclass\request" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-common\src\main\java\net\xdclass\constant" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-common\src\main\java\net\xdclass\utils" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-common\src\main\java\net\xdclass\enums" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-user-service\src\main\java\net\xdclass\config" />
-      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-user-service\src\main\java\net\xdclass\controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.UserApplication">
@@ -160,7 +146,7 @@
       <workItem from="1612081045871" duration="815000" />
       <workItem from="1612081896489" duration="5136000" />
       <workItem from="1612880978915" duration="1795000" />
-      <workItem from="1612969691441" duration="12777000" />
+      <workItem from="1612969691441" duration="21950000" />
     </task>
     <task id="LOCAL-00001" summary="搭建项目">
       <created>1611933829061</created>
@@ -197,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612087016667</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="图形验证码 邮箱验证码V1版本完结">
+      <created>1612985449580</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612985449580</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,13 +216,14 @@
     <MESSAGE value="第二天 逆向生成实体类" />
     <MESSAGE value="第三天 自定义全局异常 swagger配置" />
     <MESSAGE value="单元测试整合" />
-    <option name="LAST_COMMIT_MESSAGE" value="单元测试整合" />
+    <MESSAGE value="图形验证码 邮箱验证码V1版本完结" />
+    <option name="LAST_COMMIT_MESSAGE" value="图形验证码 邮箱验证码V1版本完结" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1612977807668">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1613067752682">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1612977807668" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613067752682" />
     <state x="392" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1612084750984">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -238,46 +232,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611933698151" />
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1612980766164">
+    <state width="1493" height="401" key="GridCell.Tab.0.bottom" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612980766164" />
-    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1612980766163">
+    <state width="1493" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
+    <state width="1493" height="401" key="GridCell.Tab.0.center" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612980766163" />
-    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1612980766163">
+    <state width="1493" height="401" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
+    <state width="1493" height="401" key="GridCell.Tab.0.left" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612980766163" />
-    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1612980766163">
+    <state width="1493" height="401" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
+    <state width="1493" height="401" key="GridCell.Tab.0.right" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612980766163" />
-    <state width="1493" height="2" key="GridCell.Tab.1.bottom" timestamp="1612980766164">
+    <state width="1493" height="401" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
+    <state width="1493" height="401" key="GridCell.Tab.1.bottom" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612980766164" />
-    <state width="1493" height="2" key="GridCell.Tab.1.center" timestamp="1612980766164">
+    <state width="1493" height="401" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
+    <state width="1493" height="401" key="GridCell.Tab.1.center" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612980766164" />
-    <state width="1493" height="2" key="GridCell.Tab.1.left" timestamp="1612980766164">
+    <state width="1493" height="401" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
+    <state width="1493" height="401" key="GridCell.Tab.1.left" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612980766164" />
-    <state width="1493" height="2" key="GridCell.Tab.1.right" timestamp="1612980766164">
+    <state width="1493" height="401" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
+    <state width="1493" height="401" key="GridCell.Tab.1.right" timestamp="1613065142972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612980766164" />
+    <state width="1493" height="401" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613065142972" />
     <state x="270" y="57" key="SettingsEditor" timestamp="1611936348446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1611936348446" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1612087037247">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1612985468077">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612087037247" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612985468077" />
     <state x="588" y="273" key="git4idea.rebase.GitRebaseDialog" timestamp="1611933476019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

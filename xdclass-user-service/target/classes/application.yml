@@ -27,7 +27,6 @@ spring:
     properties.mail.smtp.ssl.enable: true
     default-encoding: utf-8
 
-
 #配置plus打印sql日志
 mybatis-plus:
   configuration:
@@ -37,3 +36,10 @@ mybatis-plus:
 logging:
   level:
     root: INFO
+
+aliyun:
+  oss:
+    endpoint: oss-cn-chengdu.aliyuncs.com
+    access-key-id: LTAI4G2CqaG9mbQDZ6WbJtKD
+    access-key-secret: 0cSD56fplv17axTh6116Nsvu2hBHe7
+    bucketname: xdclass-1024-user

@@ -104,8 +104,6 @@
                 <version>${commons.codec.version}</version>
             </dependency>
 
-
-
             <!--接口文档依赖-->
             <dependency>
                 <groupId>io.springfox</groupId>
