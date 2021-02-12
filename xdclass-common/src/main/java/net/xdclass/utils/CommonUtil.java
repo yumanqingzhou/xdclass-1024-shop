@@ -1,8 +1,12 @@
 package net.xdclass.utils;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.velocity.runtime.directive.contrib.For;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.MessageDigest;
@@ -134,5 +138,30 @@ public class CommonUtil {
             saltString.append(ALL_CHAR_NUM.charAt(random.nextInt(ALL_CHAR_NUM.length())));
         }
         return saltString.toString();
+    }
+
+    /**
+     * 响应字符串输出给前段
+     * @param response
+     * @param object
+     */
+    public static void sendJsonMsg(HttpServletResponse response,Object object){
+        //对象序列化
+        ObjectMapper objectMapper=new ObjectMapper();
+        response.setContentType("application/json;charset=utf-8");
+        PrintWriter writer=null;
+        try {
+            writer = response.getWriter();
+            //对象序列化后 输出json字符串
+            writer.print(objectMapper.writeValueAsString(object));
+            writer.close();
+            //刷新出去
+            response.flushBuffer();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            writer.close();
+        }
+
     }
 }

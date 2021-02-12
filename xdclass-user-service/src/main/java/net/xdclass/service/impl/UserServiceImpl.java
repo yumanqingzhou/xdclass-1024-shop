@@ -5,11 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import net.xdclass.enums.BizCodeEnum;
 import net.xdclass.enums.SendCodeEnum;
 import net.xdclass.mapper.UserMapper;
+import net.xdclass.model.LoginUser;
 import net.xdclass.model.UserDO;
+import net.xdclass.request.UserLoginRequest;
 import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.NotifyService;
 import net.xdclass.service.UserService;
 import net.xdclass.utils.CommonUtil;
+import net.xdclass.utils.JWTUtil;
 import net.xdclass.utils.JsonData;
 import org.apache.commons.codec.digest.Md5Crypt;
 import org.apache.commons.lang3.StringUtils;
@@ -76,6 +79,39 @@ public class UserServiceImpl implements UserService {
             return JsonData.buildError(BizCodeEnum.ACCOUNT_REPEAT.getMessage());
         }
 
+    }
+
+    /**
+     * 用户登录
+     * 检查账号是否存在
+     * 判断密码是否相等
+     * @param userLoginRequest
+     * @return
+     */
+    @Override
+    public JsonData login(UserLoginRequest userLoginRequest) {
+        String mail = userLoginRequest.getMail();
+        QueryWrapper<UserDO> wrapper = new QueryWrapper<>();
+        wrapper.eq("mail",userLoginRequest.getMail());
+        List<UserDO> userDOS = userMapper.selectList(wrapper);
+        if (userDOS!=null&&userDOS.size()==1){
+            //存在 判断密码是否相等
+            UserDO userDO = userDOS.get(0);
+            String secret = userDO.getSecret();
+            String MD5pwd = Md5Crypt.md5Crypt(userLoginRequest.getPwd().getBytes(), secret);
+            if (MD5pwd.equalsIgnoreCase(userDO.getPwd())){
+                //登录成功 生成token
+                LoginUser loginUser=new LoginUser();
+                BeanUtils.copyProperties(userDO, loginUser);
+                String token = JWTUtil.geneJsonWebToken(loginUser);
+                return JsonData.buildSuccess(token);
+            }else {
+                JsonData.buildResult(BizCodeEnum.ACCOUNT_PWD_ERROR);
+            }
+        }else {
+            return JsonData.buildResult(BizCodeEnum.ACCOUNT_UNREGISTER);
+        }
+        return null;
     }
 
     /**

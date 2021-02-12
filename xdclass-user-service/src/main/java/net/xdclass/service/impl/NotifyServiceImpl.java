@@ -70,7 +70,6 @@ public class NotifyServiceImpl implements NotifyService {
         String cacheCode=randomCode+"_"+currentTimestamp;
         redisTemplate.opsForValue().set(cacheKey,cacheCode,CODE_EXPIRED,TimeUnit.MILLISECONDS);
 
-        //获取当前系统时间
         if (CheckUtil.isEmail(to)){
             //邮箱验证
             mailService.sendMail(to,SUBJECT,String.format(CONTENT,randomCode));
