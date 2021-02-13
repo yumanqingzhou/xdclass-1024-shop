@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import net.xdclass.enums.BizCodeEnum;
 import net.xdclass.enums.SendCodeEnum;
+import net.xdclass.interceptor.LoginInterceptor;
 import net.xdclass.mapper.UserMapper;
 import net.xdclass.model.LoginUser;
 import net.xdclass.model.UserDO;
@@ -14,6 +15,7 @@ import net.xdclass.service.UserService;
 import net.xdclass.utils.CommonUtil;
 import net.xdclass.utils.JWTUtil;
 import net.xdclass.utils.JsonData;
+import net.xdclass.vo.UserVO;
 import org.apache.commons.codec.digest.Md5Crypt;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -112,6 +114,19 @@ public class UserServiceImpl implements UserService {
             return JsonData.buildResult(BizCodeEnum.ACCOUNT_UNREGISTER);
         }
         return null;
+    }
+
+    /**
+     * 查询用户信息详情
+     * @return
+     */
+    @Override
+    public UserVO findUserDetail() {
+        LoginUser loginUser = LoginInterceptor.threadLocal.get();
+        UserDO userDO = userMapper.selectOne(new QueryWrapper<UserDO>().eq("id", loginUser.getId()));
+        UserVO userVO=new UserVO();;
+        BeanUtils.copyProperties(userDO,userVO);
+        return userVO;
     }
 
     /**

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 @Component
 @Slf4j
 public class LoginInterceptor implements HandlerInterceptor {
-    private static  ThreadLocal<LoginUser> threadLocal=new ThreadLocal();
+    public static  ThreadLocal<LoginUser> threadLocal=new ThreadLocal();
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

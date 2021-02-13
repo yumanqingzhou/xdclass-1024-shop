@@ -10,6 +10,7 @@ import net.xdclass.request.UserRegisterRequest;
 import net.xdclass.service.FileService;
 import net.xdclass.service.UserService;
 import net.xdclass.utils.JsonData;
+import net.xdclass.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +26,7 @@ import org.springframework.web.multipart.MultipartFile;
  */
 @Api(tags = "用户模块")
 @RestController
-@RequestMapping("/userDO")
+@RequestMapping("/api/user/v1")
 public class UserController {
     @Autowired
     private FileService fileService;
@@ -55,6 +56,19 @@ public class UserController {
         JsonData jsonData=userService.login(userLoginRequest);
         return jsonData;
 
+    }
+
+    /**
+     * 用户个人信息查询
+     * @return
+     */
+    @ApiOperation("个人信息查询")
+    @GetMapping("detail")
+    public JsonData detail(){
+
+        UserVO userVO = userService.findUserDetail();
+
+        return JsonData.buildSuccess(userVO);
     }
 
 
