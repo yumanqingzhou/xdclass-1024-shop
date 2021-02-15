@@ -74,8 +74,37 @@ public class SwaggerConfiguration {
                 .apis(RequestHandlerSelectors.basePackage("net.xdclass"))
                 //正则匹配请求路径，并分配到当前项目组
                 .paths(PathSelectors.ant("/admin/**"))
+                .build()
+                // 新版SwaggerUI3.0
+                .globalRequestParameters(globalReqeustParameters())
+                .globalResponses(HttpMethod.GET,getGlabalResponseMessage())
+                .globalResponses(HttpMethod.POST,getGlabalResponseMessage());
+    }
+
+    /**
+     * 优惠券的接口文档
+     *
+     * @return
+     */
+    @Bean
+    public Docket couponApiDoc() {
+
+        return new Docket(DocumentationType.OAS_30)
+                .groupName("优惠券接口文档")
+                .pathMapping("/")
+
+                //定义是否开启Swagger，false是关闭，可以通过变量去控制，线上关闭
+                .enable(true)
+
+                //配置文档的元信息
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("net.xdclass"))
+                //正则匹配请求路径，并分配到当前项目组
+                .paths(PathSelectors.ant("/api/**"))
                 .build();
     }
+
 
 
     private ApiInfo apiInfo() {

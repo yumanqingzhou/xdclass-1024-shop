@@ -33,7 +33,9 @@ public class AddressServiceImpl implements AddressService {
      */
     @Override
     public AddressVO detail(Long id) {
-        AddressDO addressDO = addressMapper.selectOne(new QueryWrapper<AddressDO>().eq("id", id));
+        LoginUser loginUser = LoginInterceptor.threadLocal.get();
+        Long userId = loginUser.getId();
+        AddressDO addressDO = addressMapper.selectOne(new QueryWrapper<AddressDO>().eq("id", id).eq("user_id",userId));
         if (addressDO!=null){
             AddressVO addressVO=new AddressVO();
             BeanUtils.copyProperties(addressDO,addressVO);
@@ -83,7 +85,7 @@ public class AddressServiceImpl implements AddressService {
        if (addressId==null){
            throw new BizException(0000,"地址参数非法");
        }
-        //删除当前登录用户地址
+        //删除当前登录用户地址 防止水平越权攻击
         LoginUser loginUser = LoginInterceptor.threadLocal.get();
         QueryWrapper<AddressDO> wrapper = new QueryWrapper<AddressDO>().eq("id", addressId)
                 .eq("user_id", loginUser.getId());
