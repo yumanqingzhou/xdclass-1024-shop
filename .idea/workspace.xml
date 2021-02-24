@@ -10,33 +10,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1daa926e-378b-4094-bc90-f57102bc224c" name="Default Changelist" comment="地址模块开发">
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/MybatisPlusPageConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/CouponCategoryEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/CouponPublishEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums/CouponStateEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/CouponApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/config/InterceptorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/mapper/CouponRecordMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/model/CouponRecordDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo/CouponVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponRecordMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/test/java/net/xdclass/db/MyBatisPlusGenerator.java" afterDir="false" />
+    <list default="true" id="1daa926e-378b-4094-bc90-f57102bc224c" name="Default Changelist" comment="查询除新人券外所有优惠券接口 领取优惠券接口v1无事务版本">
+      <change afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo/CouponRecordVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/config/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/enums/BizCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/enums/BizCodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/utils/CommonUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/target/classes/net/xdclass/utils/CommonUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-user-service/src/main/java/net/xdclass/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/CouponApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/CouponApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/controller/CouponRecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/CouponService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/service/impl/CouponServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/src/main/resources/mapper/CouponMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/mapper/CouponMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/mapper/CouponMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/net/xdclass/service/CouponService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/net/xdclass/service/CouponService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/net/xdclass/service/impl/CouponServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/xdclass-coupon-service/target/classes/net/xdclass/service/impl/CouponServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-common/src/main/java/net/xdclass/enums" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xdclass-coupon-service/src/main/java/net/xdclass/vo" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -85,14 +74,14 @@
       <recent name="net.xdclass.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-common\src\main\java\net\xdclass\enums" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\vo" />
+      <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-common\src\main\java\net\xdclass\enums" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-coupon-service\src\main\resources" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\controller" />
       <recent name="D:\IdeaProjects\xdclass-1024-shop\xdclass-coupon-service\src\main\java\net\xdclass\service\impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyBatisPlusGenerator (1)">
+  <component name="RunManager" selected="JUnit.RedissonTest">
     <configuration name="AddressServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.xdclass.service.impl.AddressServiceImpl" />
       <module name="xdclass-user-service" />
@@ -132,6 +121,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RedissonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xdclass-coupon-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.xdclass.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.xdclass.config" />
+      <option name="MAIN_CLASS_NAME" value="net.xdclass.config.RedissonTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xdclass-coupon-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.xdclass.CouponApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="xdclass-user-service" />
       <extension name="coverage">
@@ -147,6 +158,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RedissonTest" />
         <item itemvalue="Application.MyBatisPlusGenerator (1)" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Application.AddressServiceImpl" />
@@ -176,7 +188,9 @@
       <workItem from="1613148654168" duration="7603000" />
       <workItem from="1613235049970" duration="8088000" />
       <workItem from="1613301672100" duration="5190000" />
-      <workItem from="1613408869013" duration="6564000" />
+      <workItem from="1613408869013" duration="6748000" />
+      <workItem from="1614085711865" duration="1221000" />
+      <workItem from="1614090307728" duration="10464000" />
     </task>
     <task id="LOCAL-00001" summary="搭建项目">
       <created>1611933829061</created>
@@ -241,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613243072025</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="查询除新人券外所有优惠券接口 领取优惠券接口v1无事务版本">
+      <created>1613415916026</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613415916026</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,17 +292,18 @@
     <MESSAGE value="用户注册 密码加密完结" />
     <MESSAGE value="用户登录 JWT加密解密" />
     <MESSAGE value="地址模块开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="地址模块开发" />
+    <MESSAGE value="查询除新人券外所有优惠券接口 领取优惠券接口v1无事务版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="查询除新人券外所有优惠券接口 领取优惠券接口v1无事务版本" />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1613329422611">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1613329422611" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1613411689901">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1614154357230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613411689901" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1614154357230" />
     <state x="392" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613329606022">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -330,10 +352,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613242771681" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1613243104284">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1613415979456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613243104284" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613415979456" />
     <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613153540936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

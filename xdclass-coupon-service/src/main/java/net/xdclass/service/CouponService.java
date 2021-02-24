@@ -21,5 +21,7 @@ public interface CouponService extends IService<CouponDO> {
 
     Map<String,Object> pageCouponActivity(int page, int size);
 
+    JsonData redisAddCoupon(Long couponId, CouponCategoryEnum promotion);
+
     JsonData addCoupon(Long couponId, CouponCategoryEnum promotion);
 }

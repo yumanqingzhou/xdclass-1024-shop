@@ -2,6 +2,9 @@ package net.xdclass.service;
 
 import net.xdclass.model.CouponRecordDO;
 import com.baomidou.mybatisplus.extension.service.IService;
+import net.xdclass.vo.CouponRecordVO;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -12,5 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-02-15
  */
 public interface CouponRecordService extends IService<CouponRecordDO> {
+    Map<String,Object> page(Integer page,Integer size);
 
+    CouponRecordVO findById(Long recordId);
 }
