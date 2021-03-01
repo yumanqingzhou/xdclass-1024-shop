@@ -16,6 +16,9 @@ public class CacheKey {
      */
     public static final String CHECK_CODE_KEY = "code:%s:%s";
 
-
+    /**
+     * 购物车缓存 哈希结构key 用户ID为唯一标识
+     */
+    public static final String CART_KEY="cart:%s";
 
 }

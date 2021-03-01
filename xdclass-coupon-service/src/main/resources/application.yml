@@ -13,9 +13,13 @@ spring:
     password: 123456
 
   redis:
-    host: 192.168.101.11
+    host: 192.168.56.106
     password: 123456
     port: 8000
+
+  cloud:
+    nacos:
+      server-addr: 192.168.56.106
 
 #配置plus打印sql日志
 mybatis-plus:

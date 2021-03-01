@@ -13,12 +13,12 @@ spring:
     password: 123456
 
   redis:
-    host: 192.168.101.11
+    host: 192.168.56.106
     password: 123456
     port: 8000
 
   mail:
-    host: smtp.163.com   #发送邮件服务器
+    host: smtp.163.com    #发送邮件服务器
     username: 13269695159@163.com  #发送邮件的邮箱地址
     password: NZHOSHWRKWQZTXMG   #客户端授权码，不是邮箱密码,网易的是自己设置的
     from: 13269695159@163.com    # 发送邮件的地址，和上面username一致
@@ -26,6 +26,10 @@ spring:
     properties.mail.smtp.starttls.required: true
     properties.mail.smtp.ssl.enable: true
     default-encoding: utf-8
+
+  cloud:
+    nacos:
+      server-addr: 192.168.56.106
 
 #配置plus打印sql日志
 mybatis-plus:

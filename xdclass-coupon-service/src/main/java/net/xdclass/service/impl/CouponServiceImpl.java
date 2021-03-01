@@ -162,6 +162,8 @@ public class CouponServiceImpl extends ServiceImpl<CouponMapper, CouponDO> imple
 
     /**
      * Redisson分布式锁 实现领券
+     * 遗留问题 1.检查用户领取优惠券是否超额的问题
+     * 就是事务先于锁开启  A释放掉锁的瞬间 等待B线程拿到锁 此时A事务还没提交 B查到的还是旧领取记录 通过检验
      * @param couponId
      * @param category
      * @return
