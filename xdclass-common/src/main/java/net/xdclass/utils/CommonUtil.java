@@ -141,7 +141,7 @@ public class CommonUtil {
     }
 
     /**
-     * 响应字符串输出给前段
+     * 响应字符串输出给前端
      * @param response
      * @param object
      */

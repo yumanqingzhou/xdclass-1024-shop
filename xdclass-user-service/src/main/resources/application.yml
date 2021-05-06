@@ -5,7 +5,7 @@ spring:
   application:
     name: xdclass-user-service
 
-#数据库配置
+  #数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/xdclass_user?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
@@ -20,7 +20,7 @@ spring:
   mail:
     host: smtp.163.com    #发送邮件服务器
     username: 13269695159@163.com  #发送邮件的邮箱地址
-    password: NZHOSHWRKWQZTXMG   #客户端授权码，不是邮箱密码,网易的是自己设置的
+    password: CBDTFAUZAKRJGDPX   #客户端授权码，不是邮箱密码,网易的是自己设置的
     from: 13269695159@163.com    # 发送邮件的地址，和上面username一致
     properties.mail.smtp.starttls.enable: true    #部署的时候服务云平台有时候协议不一致会导致邮件发送失败 所以要把这个打开
     properties.mail.smtp.starttls.required: true
@@ -30,6 +30,18 @@ spring:
   cloud:
     nacos:
       server-addr: 192.168.56.106
+
+    #消息队列
+  rabbitmq:
+    host: 8.129.113.233
+    port: 5672
+    virtual-host: /
+    password: password
+    username: admin
+      #开启手动确认消息
+    listener:
+      simple:
+        acknowledge-mode: manual
 
 #配置plus打印sql日志
 mybatis-plus:
@@ -47,3 +59,12 @@ aliyun:
     access-key-id: LTAI4G2CqaG9mbQDZ6WbJtKD
     access-key-secret: 0cSD56fplv17axTh6116Nsvu2hBHe7
     bucketname: xdclass-1024-user
+
+#seata:
+#  tx-service-group: ${spring.application.name}-group
+#  service:
+#    grouplist:
+#      xdclass: 127.0.0.1:8091
+#
+#    vgroup-mapping:
+#      xdclass-user-service-group: xdclass

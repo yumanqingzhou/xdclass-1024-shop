@@ -5,7 +5,7 @@ spring:
   application:
     name: xdclass-coupon-service
 
-#数据库配置
+  #数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/xdclass_coupon?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
@@ -21,6 +21,18 @@ spring:
     nacos:
       server-addr: 192.168.56.106
 
+    #消息队列
+  rabbitmq:
+    host: 192.168.56.106
+    port: 5672
+    virtual-host: /
+    password: password
+    username: admin
+    #开启手动确认消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+
 #配置plus打印sql日志
 mybatis-plus:
   configuration:
@@ -30,3 +42,23 @@ mybatis-plus:
 logging:
   level:
     root: INFO
+
+#自定义消息队列配置，发送锁定库存消息-》延迟exchange-》lock.queue-》死信exchange-》release.queue
+mqconfig:
+  #延迟队列，不能被监听消费
+  coupon_release_delay_queue: coupon.release.delay.queue
+
+  #延迟队列的消息过期后转发的队列
+  coupon_release_queue: coupon.release.queue
+
+  #交换机
+  coupon_event_exchange: coupon.event.exchange
+
+  #进入延迟队列的路由key
+  coupon_release_delay_routing_key: coupon.release.delay.routing.key
+
+  #消息过期，进入释放死信队列的key
+  coupon_release_routing_key: coupon.release.routing.key
+
+  #消息过期时间,毫秒,测试改为15秒
+  ttl: 15000

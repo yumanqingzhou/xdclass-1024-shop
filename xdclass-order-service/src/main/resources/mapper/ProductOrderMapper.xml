@@ -24,5 +24,8 @@
     <sql id="Base_Column_List">
         id, out_trade_no, state, create_time, total_amount, pay_amount, pay_type, nickname, head_img, user_id, del, update_time, order_type, receiver_address
     </sql>
+    <update id="updateOrderPayState">
+        update product_order set state=#{newStatus} where out_trade_no=#{outTradeNo} and state=#{oldstatus};
+    </update>
 
 </mapper>

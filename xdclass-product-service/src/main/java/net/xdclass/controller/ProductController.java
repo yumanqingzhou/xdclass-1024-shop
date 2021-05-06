@@ -2,12 +2,16 @@ package net.xdclass.controller;
 
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import net.xdclass.request.LockProductRequest;
 import net.xdclass.service.ProductService;
+import net.xdclass.service.ProductTaskService;
 import net.xdclass.utils.JsonData;
 import net.xdclass.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,9 +26,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/product/v1")
 public class ProductController {
-
     @Autowired
     private ProductService productService;
+    @Autowired
+    private ProductTaskService productTaskService;
 
     @GetMapping("page")
     public JsonData pageProductList(@RequestParam(value = "page",defaultValue = "1")int page,
@@ -38,6 +43,17 @@ public class ProductController {
     public JsonData pageProductList(@PathVariable("product_id")Long productId){
         ProductVO productVO=productService.findDetailById(productId);
         return JsonData.buildSuccess(productVO);
+    }
+
+    /**
+     * 锁定商品
+     * @param productRequest
+     * @return
+     */
+    @PostMapping("lock_products")
+    public JsonData lockProducts(@ApiParam("锁定商品对象集合")@RequestBody LockProductRequest productRequest){
+       JsonData jsonData= productTaskService.lockProductStock(productRequest);
+       return jsonData;
     }
 
 

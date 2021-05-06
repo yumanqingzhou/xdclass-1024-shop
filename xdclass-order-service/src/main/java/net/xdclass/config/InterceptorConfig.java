@@ -10,7 +10,9 @@ public class InterceptorConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
-                .addPathPatterns("/api/order/*/**");
+                .addPathPatterns("/api/order/*/**").excludePathPatterns("/api/callback/*/**",
+                "/api/order/*/query_state",
+                "/api/order/*/test_pay");
         WebMvcConfigurer.super.addInterceptors(registry);
 
     }

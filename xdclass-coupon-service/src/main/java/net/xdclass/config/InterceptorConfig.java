@@ -15,7 +15,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/api/coupon_record/*/**")
                 .addPathPatterns("/api/coupon/*/**")
-                .excludePathPatterns("/api/coupon/*/page_coupon","/api/coupon/*/page_coupon");//查看所有优惠券接口不拦截
+                .excludePathPatterns("/api/coupon/*/page_coupon","/api/coupon/*/new_user_coupon"
+                       );//查看所有优惠券接口不拦截
         WebMvcConfigurer.super.addInterceptors(registry);
 
     }

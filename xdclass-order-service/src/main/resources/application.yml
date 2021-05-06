@@ -20,6 +20,18 @@ spring:
     nacos:
       server-addr: 192.168.56.106
 
+  #消息队列
+  rabbitmq:
+    host: 192.168.56.106
+    port: 5672
+    virtual-host: /
+    password: password
+    username: admin
+    #开启手动确认消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+
 #配置plus打印sql日志
 mybatis-plus:
   configuration:
@@ -29,3 +41,29 @@ mybatis-plus:
 logging:
   level:
     root: INFO
+
+#自定义消息队列配置，发送锁定库存消息-》延迟exchange-》lock.queue-》死信exchange-》release.queue
+mqconfig:
+  #延迟队列，不能被监听消费
+  order_release_delay_queue: order.release.delay.queue
+
+  #延迟队列的消息过期后转发的队列
+  order_release_queue: order.release.queue
+
+  #交换机
+  order_event_exchange: order.event.exchange
+
+  #进入延迟队列的路由key
+  order_release_delay_routing_key: order.release.delay.routing.key
+
+  #消息过期，进入释放队列的key
+  order_release_routing_key: order.release.routing.key
+
+  #消息过期时间,毫秒,测试改为15秒
+  ttl: 12000
+
+alipay:
+  #支付成功跳转地址
+  success_return_url: https://xdclass.net
+  #支付宝回调本地应用通知地址（比如用户支付成功后的回调通知 注意如果用户取消支付 并未支付 则支付宝不会通知）
+  callback_url: https://xdclass.net

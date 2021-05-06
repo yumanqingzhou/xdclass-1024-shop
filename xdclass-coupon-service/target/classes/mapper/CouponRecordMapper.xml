@@ -23,4 +23,17 @@
         id, coupon_id, create_time, use_state, user_id, user_name, coupon_title, start_time, end_time, order_id, price, condition_price
     </sql>
 
+    <!--批量更新优惠券状态-->
+    <update id="updateLockUseStateBatch" >
+        update coupon_record set use_state=#{useState} where user_id=#{userID} and id in
+        <foreach collection="lockCouponRecordIds" index="index" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </update>
+
+    <update id="updateStatus">
+        update coupon_record set use_state=#{name} where id=#{couponRecordId}
+    </update>
+
+
 </mapper>

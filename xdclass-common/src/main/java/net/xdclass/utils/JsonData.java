@@ -1,9 +1,12 @@
 package net.xdclass.utils;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.xdclass.enums.BizCodeEnum;
+import springfox.documentation.spring.web.json.Json;
 
 /**
  * 小滴课堂,愿景：让技术不再难学
@@ -79,5 +82,9 @@ public class JsonData {
      */
     public static JsonData buildResult(BizCodeEnum codeEnum){
         return JsonData.buildCodeAndMsg(codeEnum.getCode(),codeEnum.getMessage());
+    }
+
+    public<T> T getData(TypeReference<T> typeReference){
+       return JSON.parseObject(JSON.toJSONString(data),typeReference);
     }
 }

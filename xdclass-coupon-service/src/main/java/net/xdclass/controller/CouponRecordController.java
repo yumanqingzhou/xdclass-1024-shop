@@ -4,6 +4,7 @@ package net.xdclass.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import net.xdclass.enums.BizCodeEnum;
+import net.xdclass.request.LockCouponRecordRequest;
 import net.xdclass.service.CouponRecordService;
 import net.xdclass.utils.JsonData;
 import net.xdclass.vo.CouponRecordVO;
@@ -40,12 +41,19 @@ public class CouponRecordController {
         return JsonData.buildSuccess(pageResult);
     }
 
-    @ApiOperation("查询已经优惠券详情")
+    @ApiOperation("查询已领优惠券详情")
     @GetMapping("detail/{record_id}")
     public JsonData getCoupondetail(@PathVariable("record_id")Long recordId){
 
          CouponRecordVO couponRecordVO=couponRecordService.findById(recordId);
         return couponRecordVO==null?JsonData.buildResult(BizCodeEnum.COUPON_NO_EXITS):JsonData.buildSuccess(couponRecordVO);
+    }
+
+    @ApiOperation("RPC-锁定优惠券")
+    @PostMapping("lock_records")
+    public JsonData lockCouponRecords(@RequestBody LockCouponRecordRequest recordRequest){
+       JsonData result= couponRecordService.lockCouponRecords(recordRequest);
+       return result;
     }
 }
 

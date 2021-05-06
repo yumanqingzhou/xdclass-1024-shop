@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import net.xdclass.enums.CouponCategoryEnum;
 import net.xdclass.model.CouponDO;
 import com.baomidou.mybatisplus.extension.service.IService;
+import net.xdclass.request.NewUserCouponRequest;
 import net.xdclass.utils.JsonData;
 
 import java.util.Map;
@@ -24,4 +25,6 @@ public interface CouponService extends IService<CouponDO> {
     JsonData redisAddCoupon(Long couponId, CouponCategoryEnum promotion);
 
     JsonData addCoupon(Long couponId, CouponCategoryEnum promotion);
+
+    JsonData initNewUserCoupon(NewUserCouponRequest couponRequest);
 }

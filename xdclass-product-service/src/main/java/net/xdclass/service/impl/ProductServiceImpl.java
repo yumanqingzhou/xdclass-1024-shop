@@ -71,6 +71,7 @@ public class ProductServiceImpl  implements ProductService {
         return productVOList;
     }
 
+
     /**
      * 商品对象转换
      * @param productDO

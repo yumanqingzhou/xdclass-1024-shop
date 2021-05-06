@@ -14,6 +14,7 @@ import net.xdclass.model.CouponDO;
 import net.xdclass.mapper.CouponMapper;
 import net.xdclass.model.CouponRecordDO;
 import net.xdclass.model.LoginUser;
+import net.xdclass.request.NewUserCouponRequest;
 import net.xdclass.service.CouponService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import net.xdclass.utils.CommonUtil;
@@ -164,13 +165,14 @@ public class CouponServiceImpl extends ServiceImpl<CouponMapper, CouponDO> imple
      * Redisson分布式锁 实现领券
      * 遗留问题 1.检查用户领取优惠券是否超额的问题
      * 就是事务先于锁开启  A释放掉锁的瞬间 等待B线程拿到锁 此时A事务还没提交 B查到的还是旧领取记录 通过检验
+     *
      * @param couponId
      * @param category
      * @return
      */
-    @Transactional(rollbackFor=Exception.class,propagation= Propagation.REQUIRED)
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
     @Override
-    public JsonData addCoupon(Long couponId, CouponCategoryEnum category){
+    public JsonData addCoupon(Long couponId, CouponCategoryEnum category) {
         LoginUser loginUser = LoginInterceptor.threadLocal.get();
         String lockKey = "lock:coupon:" + couponId;
         RLock lock = redissonClient.getLock(lockKey);
@@ -208,11 +210,45 @@ public class CouponServiceImpl extends ServiceImpl<CouponMapper, CouponDO> imple
                 throw new BizException(BizCodeEnum.COUPON_NO_STOCK);
             }
 
-        }finally {
+        } finally {
             lock.unlock();
         }
         return JsonData.buildSuccess();
     }
+
+    /**
+     * 新用户初始化发放优惠券
+     * 1.用户微服务调用的时候  属于用户注册完成但是尚未登录 所以没有token
+     * 2.构造一个登录用户
+     * 3.调用发放优惠券 方法
+     * 4.因为每个优惠券有限领次数 因此 无所谓该接口是否暴露
+     *
+     * @param couponRequest
+     * @return
+     */
+
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
+    @Override
+    public JsonData initNewUserCoupon(NewUserCouponRequest couponRequest) {
+        LoginUser loginUser = new LoginUser();
+        loginUser.setId(couponRequest.getUserId());
+        loginUser.setName(couponRequest.getName());
+        //查询用户可以领那些优惠券
+        List<CouponDO> category = couponMapper.selectList(new QueryWrapper<CouponDO>()
+                .eq("category", CouponCategoryEnum.NEW_USER.name()));
+        if (category != null) {
+            LoginInterceptor.threadLocal.set(loginUser);
+            for (CouponDO couponDO : category) {
+                this.addCoupon(couponDO.getId(), CouponCategoryEnum.NEW_USER);
+            }
+            return JsonData.buildSuccess();
+        } else {
+            return JsonData.buildError("无新人优惠券");
+        }
+
+
+    }
+
     /**
      * 优惠券对象DO转换VO
      *

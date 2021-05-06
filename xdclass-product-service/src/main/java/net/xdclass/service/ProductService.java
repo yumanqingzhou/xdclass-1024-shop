@@ -22,4 +22,5 @@ public interface ProductService {
     ProductVO findDetailById(Long productId);
 
     List<ProductVO> findProductByIdBatch(List<Long> productIDList);
+
 }

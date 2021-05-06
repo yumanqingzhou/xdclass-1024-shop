@@ -1,9 +1,14 @@
 package net.xdclass.service;
 
+import net.xdclass.enums.ProductOrderPayTypeEnum;
+import net.xdclass.model.OrderMessage;
 import net.xdclass.model.ProductOrderDO;
 import com.baomidou.mybatisplus.extension.service.IService;
 import net.xdclass.request.ConfirmOrderRequest;
+import net.xdclass.request.RepayOrderRequest;
 import net.xdclass.utils.JsonData;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -16,4 +21,14 @@ import net.xdclass.utils.JsonData;
 public interface ProductOrderService {
 
     JsonData confirmOrder(ConfirmOrderRequest confirmOrderRequest);
+
+    String queryOrderState(String outTradeNo);
+
+
+    Boolean closeProductOrder(OrderMessage orderMessage);
+
+    JsonData handlerOrderCallbackMsg(ProductOrderPayTypeEnum alipay, Map<String, String> paramsMap);
+
+    JsonData repay(RepayOrderRequest repayOrderRequest);
+
 }

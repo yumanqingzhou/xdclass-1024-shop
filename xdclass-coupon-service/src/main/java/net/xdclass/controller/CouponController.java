@@ -7,10 +7,12 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.Tag;
 import net.xdclass.enums.CouponCategoryEnum;
+import net.xdclass.request.NewUserCouponRequest;
 import net.xdclass.service.CouponService;
 import net.xdclass.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.spring.web.json.Json;
 
 import java.util.Map;
 
@@ -42,6 +44,13 @@ public class CouponController {
     @GetMapping("/add/promotion/{coupon_id}")
     public JsonData addPromotionCoupon(@ApiParam("优惠券id")@PathVariable("coupon_id") Long couponId) {
         JsonData jsonData=couponService.addCoupon(couponId, CouponCategoryEnum.PROMOTION);
+        return jsonData;
+    }
+
+    @ApiOperation("新用户注册领取优惠券")
+    @PostMapping("/new_user_coupon")
+    public JsonData addNewCoupon(@ApiParam("用户对象")@RequestBody NewUserCouponRequest couponRequest){
+        JsonData jsonData=couponService.initNewUserCoupon(couponRequest);
         return jsonData;
     }
 }

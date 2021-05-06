@@ -2,6 +2,7 @@ package net.xdclass.mapper;
 
 import net.xdclass.model.ProductOrderDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,4 +16,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductOrderMapper extends BaseMapper<ProductOrderDO> {
 
+    void updateOrderPayState(@Param("outTradeNo") String outTradeNo, @Param("newStatus") String newStatus, @Param("oldstatus") String oldstatus);
 }
